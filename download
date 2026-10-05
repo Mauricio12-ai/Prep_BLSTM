@@ -1,0 +1,19 @@
+# Entornos y cachés
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+# Datos y pesos: conservar localmente
+Dataset/
+Landmarks_C3/
+datos_procesados*/
+resultados/
+BiLSTM_*/
+*.npz
+*.npy
+*.pt
+*.pth
+*.zip
+# Configuración privada
+.env
+.vscode/

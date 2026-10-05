@@ -1,6 +1,7 @@
 """Baseline BiLSTM C3. Prueba técnica por defecto; test externo solo con --evaluar-test."""
 import argparse, csv, hashlib, json, random
 from pathlib import Path
+from exportar_matrices import exportar
 import numpy as np
 import torch
 from torch import nn
@@ -125,6 +126,14 @@ def main():
         with (args.salida/'predicciones_test.csv').open('w',newline='',encoding='utf-8') as f:
             w=csv.writer(f);w.writerow(['sample_id','y_true','y_pred']);w.writerows(zip(ids[split['test']],targets,pred))
     (args.salida/'metricas.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
+    # Las etiquetas se recuperan de las muestras y de sus índices reales.
+    clases = []
+    for clase_id in range(34):
+        nombres = {str(s).split('/')[1] for s in ids[y == clase_id]}
+        if len(nombres) != 1:
+            raise ValueError(f'Etiquetas ambiguas para clase {clase_id}')
+        clases.append(nombres.pop())
+    exportar(report, args.salida, clases)
     print('Finalizado. Test evaluado:',args.evaluar_test,flush=True)
 
 if __name__=='__main__':main()
