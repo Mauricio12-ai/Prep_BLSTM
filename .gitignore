@@ -1,0 +1,24 @@
+.venv*/
+__pycache__/
+*.pyc
+datos/**
+!datos/**/
+!datos/**/LEEME.md
+resultados/**
+!resultados/**/
+!resultados/**/LEEME.md
+*.pt
+*.pth
+*.npz
+*.npy
+*.zip
+
+# Copias de seguridad y archivos temporales de Windows/Office
+*.bak_*
+desktop.ini
+~$*
+
+# No se publican: código del compañero y documentos del artículo (datos personales)
+codigo/modelos/stgcn_referencia/
+documentacion/articulo/**
+!documentacion/articulo/LEEME.md

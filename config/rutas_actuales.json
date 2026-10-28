@@ -1,0 +1,8 @@
+{
+  "landmarks_npz": "C:\\Users\\PC\\Desktop\\Seminario1\\BaselineActualizado\\datos_procesados_20261005_160031\\landmarks_32f.npz",
+  "rgb_depth_root": "C:\\Users\\PC\\Downloads\\C3_RGB_Depth_112",
+  "union_root": "C:\\Users\\PC\\Desktop\\Paso1_RGB_Landmarks\\Paso1_RGB_Landmarks\\union_20261012_153325",
+  "indice_comun": "C:\\Users\\PC\\Desktop\\Paso1_RGB_Landmarks\\Paso1_RGB_Landmarks\\union_20261012_153325\\indice_comun.csv",
+  "zip_muestra": "C:\\Users\\PC\\Desktop\\SUBJECT_1.zip",
+  "nota": "Inventario de rutas confirmadas en conversación. No se modificaron archivos del PC. Los scripts usan argumentos; no leen automáticamente este JSON."
+}
