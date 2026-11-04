@@ -1,0 +1,38 @@
+# Solo se publica el código. Todo lo demás (dataset, datos procesados,
+# resultados, documentación, figuras y configuración local) queda en la PC.
+/*
+!/.gitignore
+!/README.md
+!/requirements_fusion.txt
+!/instalar_entorno.ps1
+!/demo_evaluar.ps1
+!/codigo/
+!/notebooks/
+
+# Dentro de codigo/ y notebooks/: solo scripts y el cuaderno
+codigo/**/*.md
+codigo/preprocesamiento/rgb_landmarks/
+codigo/modelos/bilstm/
+codigo/modelos/stgcn_referencia/
+notebooks/*
+!notebooks/*.ipynb
+
+# Cachés, copias y cualquier archivo de datos o resultados
+__pycache__/
+*.pyc
+*.bak_*
+*.pt
+*.pth
+*.npz
+*.npy
+*.zip
+*.csv
+*.json
+*.html
+*.png
+*.jpg
+*.jpeg
+*.txt
+!/requirements_fusion.txt
+desktop.ini
+~$*
